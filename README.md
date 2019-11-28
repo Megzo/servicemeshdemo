@@ -368,17 +368,12 @@ linkerd install --ignore-cluster | kubectl delete -f -
 kubectl get pods -A
 ```
 
-### 3. Using Istio
+### 4. Using Istio
 
-[Istio](https://istio.io/) is another popular Service Mesh implementation. Compared to
-Linkerd, it is much more feature rich (you can do crazy things with it), but as a result 
-it is much more heavy, meaning that it's control plane requires much more resource to run, and
-operating it might need a dedicated team (how has much to learn). But some people say, it's definitely
+[Istio](https://istio.io/) is another popular Service Mesh implementation. Compared to Linkerd, it is much more feature rich (you can do crazy things with it), but as a result it is much more heavy, meaning that it's control plane requires much more resource to run, and operating it might need a dedicated team (how has much to learn). But some people say, it's definitely
 worth the effort. 
 
-The other major difference is that while Linkerd uses it's own proxy implementation (written in Rust),
-Istio uses a proxy called [Envoy](https://www.envoyproxy.io/). It's actually Envoy who can implement 
-these rich features. Istio is basically a control plane over Envoy. 
+The other major difference is that while Linkerd uses it's own proxy implementation (written in Rust), Istio uses a proxy called [Envoy](https://www.envoyproxy.io/). It's actually Envoy who can implement these rich features. Istio is basically a control plane over Envoy. 
 
 So let's install Istio. First, download the latest release of `istioctl` (as of now 1.4.0):
 ```
